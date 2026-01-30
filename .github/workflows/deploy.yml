@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - main   # or your default branch
+      
+permissions:          # <‑ add this section
+  contents: write     # allow the action to push to gh-pages
 
 jobs:
   build-deploy:
