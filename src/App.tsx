@@ -78,11 +78,12 @@ function aggregateSuggestions(answers: Record<string, string>) {
     const answer = answers[key];
     // @ts-ignore – dynamic access
     const list = styleMap[key][answer] ?? [];
-    list.forEach((s) => suggestions.add(s));
+    list.forEach((s: string) => suggestions.add(s));
   }
 
   return Array.from(suggestions);
 }
+
 
 /**
  * ---- 4️⃣ Main App component ---------------------------------------------
